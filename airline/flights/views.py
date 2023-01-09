@@ -18,4 +18,8 @@ def flight(request, flight_id):
     # here passengers is our related name, it is a way of taking a flight and getting all of it's passengers.
 
 def book(request, flight_id):
-    
+    if request.method == "POST":
+        flight = Flight.objects.get(pk = flight_id)
+        passenger=Passenger.objects.get(pk=int(request.POST["passenger"]))
+        passenger.flights.add(flight)
+        return HttpResponseRedirect(reverse("flight"))
