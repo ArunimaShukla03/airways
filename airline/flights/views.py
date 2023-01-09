@@ -11,5 +11,11 @@ def index(request):
 def flight(request, flight_id):
     flight = Flight.objects.get(pk = flight_id) # more generic way of referencing a primary key.
     return render(request, "flights/flight.html", {
-        "flight": flight
+        "flight": flight,
+        "passengers": flight.passengers.all()
     })
+
+    # here passengers is our related name, it is a way of taking a flight and getting all of it's passengers.
+
+def book(request, flight_id):
+    
