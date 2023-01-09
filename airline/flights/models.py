@@ -51,3 +51,14 @@ class Flight(models.Model):
 # For example, what happens to a flight when the thing it is referencing gets deleted (an airport gets deleted), thus it also deletes any of the corresponding flights.
 
 # "related_name" is a way of me accessing a relationship in a reverse order that we can get a flight's origin in an airport, but the reverse question here is if I have an airport, how do we get all of the flights that have that airport as the origin.
+
+class Passenger(models.Model):
+    first = models.CharField(max_length=64)
+    last = models.CharField(max_length=64)
+    flights = models.ManyToManyField(Flight, blank = True, related_name="passengers")
+
+# These passengers have many to many relationship with flights, that a flight could have multiple passengers and a passenger could be on multiple flights. Thus we need additional tables to keep track of this.
+
+# "blank = True" allows the passengers to have the possibility that they have no flights.
+
+# We have related name as "passengers" meaning if I have a passenger, I can use its attribute to access all of their flights. And if we have a flight, then we can access all of their passengers.

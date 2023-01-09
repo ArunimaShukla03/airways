@@ -6,4 +6,4 @@ urlpatterns = [
     path("<int:flight_id>", views.flight, name="flight")
 ]
 
-# Here the flight id
+# Here the flight id is created which will allow each flight to have a web page.
