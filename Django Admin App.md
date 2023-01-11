@@ -9,3 +9,5 @@ Now we have created our credentials, we have the ability to visit the web interf
 First we need to add our models to the admin app. We added the models to the admin app by going to the "admin.py" and registering both of the models. 
 
 Now when we go to the site and login using the credentials, now we have the ability to manipulate the underlying database by manipulating the models and add or modify data that already exists.
+
+This is what we do.
