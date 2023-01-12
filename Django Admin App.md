@@ -10,4 +10,3 @@ First we need to add our models to the admin app. We added the models to the adm
 
 Now when we go to the site and login using the credentials, now we have the ability to manipulate the underlying database by manipulating the models and add or modify data that already exists.
 
-This is what we do.

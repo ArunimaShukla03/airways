@@ -18,5 +18,14 @@
         {% endfor %}
     </ul>
 
+<h2>Add Passenger: </h2>
+
+<form action="{% url 'book' flight.id %}" method="post">
+    {% csrf_token %}
+    <select name="passenger">
+
+    </select> <!--This is to give a dropdown menu. This would consist a bunch of options and amongst it, one option will be for everyone who isn't a passenger on this flight.-->
+</form>
+
     <a href="{% url 'index' %}">Back to Flight List</a>
 {% endblock %}
