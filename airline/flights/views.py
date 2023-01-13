@@ -16,7 +16,7 @@ def flight(request, flight_id):
     flight = Flight.objects.get(pk = flight_id) # more generic way of referencing a primary key.
     return render(request, "flights/flight.html", {
         "flight": flight,
-        "passengers": flight.passengers.all()
+        "passengers": flight.passengers.all(),
         "non_passengers": Passenger.objects.exclude(flights=flight).all()
     })
 
