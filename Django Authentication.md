@@ -1,0 +1,1 @@
+We now can create a django authentication by creating a new app called "users".
