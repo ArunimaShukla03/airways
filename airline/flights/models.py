@@ -26,7 +26,7 @@ class Flight(models.Model):
 
 # But nothing here actually has modified the database the Django is using to store information about my web application.
 
-# Thus we create a "migration" to let django go know the changes in the database. And then we migrate them to let django take those changes and apply them to the database.
+# Thus we create a "migration" to let django know the changes in the database. And then we migrate them to let django take those changes and apply them to the database.
 
 # Using the command line "python manage.py makemigrations" and now in order to apply the migration, we use "python manage.py migrate". Now we have a SQLite file.
 
